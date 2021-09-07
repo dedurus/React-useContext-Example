@@ -22,8 +22,6 @@ export default function Glavna(props) {
 
 
     function PrikaziLista(props) {
-        console.log('ПриказиЛИста props: ', props);
-
         return (
             <ol>
                 {props.lista.map((mes, index) => <Item key={index} item={mes} />)}
@@ -37,9 +35,7 @@ export default function Glavna(props) {
 
             <h4>Листа ({lista.length}):</h4>
 
-
             <PrikaziLista lista={lista} />
-
 
             <div>
                 <input
@@ -48,8 +44,6 @@ export default function Glavna(props) {
                 />
                 <button onClick={(e) => dodaj_item()}>Внеси</button>
             </div>
-
-
 
         </div>
     )
