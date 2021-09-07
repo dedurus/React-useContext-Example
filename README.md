@@ -1,2 +1,2 @@
 # React-useContext-Example
-Created with CodeSandbox
+Two simple examples of state sharing between components using `useState` hook.
