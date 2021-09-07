@@ -1,9 +1,8 @@
 {
   "name": "react-context-api-example",
   "version": "1.0.0",
-  "description": "A simple demonstration of how the new Context API works in React",
+  "description": "A simple demonstration of how the Context API works in React",
   "keywords": [],
-  "homepage": "https://codesandbox.io/s/new",
   "main": "src/index.js",
   "dependencies": {
     "react": "16.8.1",

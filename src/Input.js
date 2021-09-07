@@ -1,23 +1,31 @@
 import React, { useContext } from "react";
-import { Context } from "./Provider";
+import { Kontekst } from "./Provider";
 import InputTitle from "./InputTitle";
 
 const Input = () => {
-  const { name, updateName, aCallback } = useContext(Context);
+  const { ime, promeniIme, izbrisiIme } = useContext(Kontekst);
+
+  const input_css = {
+    marginTop: '5%'
+  }
+  const btn_css = {
+    marginTop: '10px'
+  }
 
   return (
     <div>
       <InputTitle />
       <div>
-        <InputTitle />
-        <div>
+
+        <div style={input_css}>
+          <h4>Компонента за инпут</h4>
           <input
             type="text"
-            value={name}
-            onChange={(e) => updateName(e.target.value)}
+            value={ime}
+            onChange={(e) => promeniIme(e.target.value)}
           />
         </div>
-        <button onClick={aCallback}>Избриши</button>
+        <button style={btn_css} onClick={izbrisiIme}>Избриши</button>
       </div>
     </div>
   );

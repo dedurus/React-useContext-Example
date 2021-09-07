@@ -1,17 +1,19 @@
 import React, { useContext } from "react";
-import { Context } from "./Provider";
+import { Kontekst } from "./Provider";
 
-const css = {
+const ime_css = {
   color: "red",
   fontWeigth: 800
 };
 
+
 const InputTitle = () => {
-  const { name } = useContext(Context);
+  const { ime } = useContext(Kontekst);
 
   return (
     <div>
-      <b>context</b> во <i>Provider</i> е :<span style={css}>{name}</span>
+      <h4>Компонента за рендер</h4>
+      <b>Kontekst</b> во <i>Provider</i> е :<span style={ime_css}>{ime}</span>
     </div>
   );
 };

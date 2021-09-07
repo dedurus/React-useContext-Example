@@ -1,25 +1,27 @@
 import React, { useState } from "react";
 
-export const Context = React.createContext();
+export const Kontekst = React.createContext();
 
 const Provider = (props) => {
-  const aCallback = () => {
-    alert("Колбек на клик");
-    setName("");
+  const izbrisiIme = () => {
+    alert("Бришење");
+    setIme("");
   };
 
-  const [name, setName] = useState("Нешто");
+  const [ime, setIme] = useState("Нешто");
 
   return (
-    <Context.Provider
-      value={{
-        name,
-        updateName: (name) => setName(name),
-        aCallback: aCallback
-      }}
+    <Kontekst.Provider
+      value={
+        {
+          ime,
+          promeniIme: (ime) => setIme(ime),
+          izbrisiIme: izbrisiIme
+        }
+      }
     >
       {props.children}
-    </Context.Provider>
+    </Kontekst.Provider>
   );
 };
 
