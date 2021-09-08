@@ -8,12 +8,15 @@ const ime_css = {
 
 
 const InputTitle = () => {
-  const { ime } = useContext(Kontekst);
+  const { ime, test } = useContext(Kontekst);
 
   return (
     <div>
       <h4>Компонента за рендер</h4>
       <b>Kontekst</b> во <i>Provider</i> е :<span style={ime_css}>{ime}</span>
+      <p>Ime: {test.vnes}</p>
+      <p>Datum: {test.datum}</p>
+      <p>Vreme: { test.vreme } </p>
     </div>
   );
 };
